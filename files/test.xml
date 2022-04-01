@@ -1,0 +1,46 @@
+<grammar xmlns:sapi="http://schemas.microsoft.com/Speech/2002/06/SRGSExtensions" xml:lang="EN-US" tag-format="semantics-ms/1.0" version="1.0" root="Movies" mode="voice" xmlns="http://www.w3.org/2001/06/grammar" sapi:alphabet="x-microsoft-ups">
+  <rule id="Movies" scope="public">
+    <one-of>
+      <item>
+        <item>father</item>
+        <tag>$._value = "I am your father"</tag>
+      </item>
+      <item>
+        <item>Go ahead</item>
+        <tag>$._value = "Go ahead make my day"</tag>
+      </item>
+      <item>
+        <item>force</item>
+        <tag>$._value = "May the Force be with you"</tag>
+      </item>
+      <item>
+        <item>dreams</item>
+        <tag>$._value = "The stuff that dreams are made of"</tag>
+      </item>
+      <item>
+        <item>dead people</item>
+        <tag>$._value = "I see dead people"</tag>
+      </item>
+      <item>
+        <item>You talking to me</item>
+        <tag>$._value = "You talking to me"</tag>
+      </item>
+      <item>
+        <item>show me</item>
+        <tag>$._value = "Show me the money"</tag>
+      </item>
+      <item>
+        <item>suspects</item>
+        <tag>$._value = "Round up the usual suspects"</tag>
+      </item>
+      <item>
+        <item>hello</item>
+        <tag>$._value = "You had me at hello"</tag>
+      </item>
+      <item>
+        <item>rob banks</item>
+        <tag>$._value = "We rob banks"</tag>
+      </item>
+    </one-of>
+  </rule>
+</grammar>
