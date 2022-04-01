@@ -1,7 +1,7 @@
 # Node Movie Quote Sample App
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-This project is a voice and SMS app built with FreeClimb that takes a phrase via call or text and says/texts back a movie quote with the
+This project is a voice and SMS app built with FreeClimb that takes a phrase via call or text and says/texts back a movie quote containing the
 provided phrase
 
 # Description 
@@ -10,6 +10,7 @@ Specifically this app will:
 - The user will then call or text the number and provide a phrase
 - The text feature will allow any random phrases
 - However, the call/audio feature will only allow a specific set of phrases as specified by the Grammar
+- The app will then respond with a movie quote containing the phrase using either text/audio depending on the initial action
 
 # Requirements
 A [FreeClimbAccount](https://www.freeclimb.com/dashboard/signup/)
