@@ -45,8 +45,31 @@ A [configured FreeClimb number](https://docs.freeclimb.com/docs/getting-and-conf
    ## Running the Sample App
 
 ```bash
-yarn start
+yarn start:dev
 ```
+
+## Testing the app 
+
+1. To test against the audio functionality, please use only phrases/words that have been specified in the Grammar file. If you need to expand the list of words that can be recognized by the Speech Recognizer, please make changes to the grammar file accordingly.
+The following guide will help you understand Grammar file usage in FC: [Grammars](https://docs.freeclimb.com/docs/how-to-write-grammars) 
+
+Below is list of words/phrases that can be recognized by this code sample:
+
+```
+1. father
+2. Go ahead
+3. force
+4. dreams
+5. dead people
+6. You talking to me
+7. show me
+8. suspects
+9. hello
+10. rob banks
+
+```
+
+2. For text functionality any words or phrases can be utilized during testing
 
 ## Feedback & Issues
 If you would like to give the team feedback or you encounter a problem, please [contact support](https://www.freeclimb.com/support/) or [submit a ticket](https://freeclimb.com/dashboard/portal/support) in the dashboard.

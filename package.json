@@ -1,5 +1,5 @@
 {
-  "name": "movieQuoteApp",
+  "name": "movie-quote-app",
   "version": "1.0.0",
   "description": "A movie quote app by FreeClimb",
   "main": "index.js",

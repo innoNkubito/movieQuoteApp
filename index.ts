@@ -58,11 +58,18 @@ app.post("/incomingCall", (req: Request, res: Response<freeClimbSdk.PerCL.Comman
         prompts: [
             {
                 "Say": {
-                    "text": "Please utter a phrase."
+                    "text": "After the tone, please say something and I will give you a movie quote"
+                },
+            },
+            {
+                "Pause": {
+                    "length": 200
                 }
             }
         ]
     }
+    console.log("ACTION URL:", actionUrl)
+    console.log("GRAMMAR FILE:", grammarFile)
     const getSpeech = freeClimb.percl.getSpeech(actionUrl, grammarFile, options)
     res.send(freeClimb.percl.build(getSpeech))
 })
@@ -92,7 +99,7 @@ app.post("/movieQuote", async (req: Request<any, any, {
             const { title, phrase, year } = randomQuote
             const movieTitle = `${title} ${year}`
             const movieQuote = `The quote is: "${phrase}"`
-            const resPercl = freeClimb.percl.build(freeClimb.percl.say(movieTitle), freeClimb.percl.say(movieQuote), freeClimb.percl.sms(to, from, `${movieTitle}`), redirect)
+            const resPercl = freeClimb.percl.build(freeClimb.percl.say(movieTitle), freeClimb.percl.say(movieQuote), redirect)
             res.send(resPercl)
         } else {
             res.send(freeClimb.percl.build(redirect))
@@ -103,7 +110,6 @@ app.post("/movieQuote", async (req: Request<any, any, {
 })
 
 app.post("/incomingSms", async (req: Request<any, any, SmsBody>, res: Response) => {
-    console.log(req.body)
     const { from, to, text } = req.body
 
     const randomQuote = await generateQuote(text)
