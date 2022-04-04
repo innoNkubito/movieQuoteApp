@@ -6,7 +6,9 @@
   "author": "Nkubito Innocent <inkubito@vailsys.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index.ts"
+    "start:dev": "nodemon index.ts",
+    "build": "tsc --project tsconfig.json",
+    "start:prod": "yarn build && node ."
   },
   "dependencies": {
     "@freeclimb/sdk": "^2.1.3",

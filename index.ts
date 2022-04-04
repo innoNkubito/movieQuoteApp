@@ -39,6 +39,15 @@ const generateQuote = async (phrase: string): Promise<MovieQuote> => {
     return movieQuotes.docs[randomIndex]
 }
 
+app.get("/health", (req: Request, res: Response) => {
+    res.json({
+        data: {
+            startTime: new Date().toLocaleString(),
+            status: "Live"
+        }
+    })
+})
+
 app.post("/incomingCall", (req: Request, res: Response<freeClimbSdk.PerCL.Command[]>) => {
     const actionUrl = `${HOST_URL}/movieQuote`
     const grammarFile = `${HOST_URL}/grammar`
